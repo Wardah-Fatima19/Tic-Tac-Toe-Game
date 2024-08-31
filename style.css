@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("tic\ tac\ toe\ background.webp");
+    background-image: url("tic tac toe background.webp");
     background-size: cover;
     text-align: center;
 }
@@ -15,14 +15,23 @@ h1 {
     border: 1px solid #fefae0;
     border-radius: 1.3rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-    text-decoration:underline double #000000;
+    text-decoration: underline double #000000;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2.7rem; 
     width: 350px;
-    margin-left: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 300px) {
+    h1 {
+        font-size: 2rem;
+        width: 80%;
+        height: auto;
+        padding: 1rem;
+    }
 }
 
 .container {
@@ -30,6 +39,12 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 300px) {
+    .container {
+        height: 60vh;
+    }
 }
 
 .game {
@@ -42,6 +57,13 @@ h1 {
     gap: 1.5vmin;
 }
 
+@media (max-width: 300px) {
+    .game {
+        height: 70vmin;
+        width: 70vmin;
+    }
+}
+
 .box {
     height: 18vmin;
     width: 18vmin;
@@ -49,31 +71,53 @@ h1 {
     border: 1px solid #dee2e6;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     font-size: 8vmin;
-    color:#ffd166;
+    color: #ffd166;
     background-color: #006494;
 }
 
-#reset {
-    padding: 1rem;
-    font-size: 1.2rem;
-    background-color: #240046;
-    color: #fff3b0;
-    border-radius: 1.2rem;
-    border: none;
+@media (max-width: 300px) {
+    .box {
+        height: 22vmin;
+        width: 22vmin;
+        font-size: 9vmin;
+    }
 }
 
+#reset,
 #new {
     padding: 1rem;
     font-size: 1.2rem;
-    background-color: #023047;
-    color: #fff3b0;
     border-radius: 1rem;
     border: none;
+}
+
+#reset {
+    background-color: #240046;
+    color: #fff3b0;
+}
+
+#new {
+    background-color: #023047;
+    color: #fff3b0;
+}
+
+@media (max-width: 300px) {
+    #reset,
+    #new {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
 }
 
 #msg {
     color: #c42e67;
     font-size: 5vmin;
+}
+
+@media (max-width: 300px) {
+    #msg {
+        font-size: 6vmin;
+    }
 }
 
 .msgcontainer {
@@ -83,6 +127,13 @@ h1 {
     align-items: center;
     flex-direction: column;
     gap: 4rem;
+}
+
+@media (max-width: 300px) {
+    .msgcontainer {
+        height: 90vmin;
+        gap: 5rem;
+    }
 }
 
 .hide {
